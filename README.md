@@ -6,7 +6,8 @@ Status: Working
 
 ## Map Demo
 Status: Incomplete- Dropped for now
-Reason: The jagged-ness in roads that cannot be aligned with the cartesian orientation of the dots proved to be an obstruction in the eventual user tests. The representation may require more polishing. More info TBD.
+
+<br>Reason: The jagged-ness in roads that cannot be aligned with the cartesian orientation of the dots proved to be an obstruction in the eventual user tests. The representation may require more polishing. More info TBD.
 
 ## Excel Demo
 Status: Proposed. Starting June 2019.
