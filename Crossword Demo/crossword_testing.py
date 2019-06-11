@@ -103,7 +103,7 @@ def UpdateScreen (Frame):
     ser.write(Frame)
     response = ser.readlines()
     response_list = list(response)
-    time.sleep(0.1)
+    time.sleep(0.001)
     print " ------------------"
 
 
@@ -462,7 +462,9 @@ def sound(argument):
     elif(argument=='end'):
         music.load('pop.wav')
         music.play()
-
+    elif(argument=='cursor'):
+        music.load('tick.mp3')
+        music.play()
     return
 
 
@@ -617,9 +619,9 @@ while ser.is_open:
                             print "EDIT MODE: ",str(edit_mode_char_len)
                         else:
                             print "@@@ Play end of word sound @@@"
-                            sound('end')
+                            sound('blocked')
                     else:
-                        music.load("blocked.mp3") ;music.play()
+                        sound('blocked')
                         print "use up and down arrow keys to move cursor"
 
             if( ord(button_value[3]) ==32 and ord(button_value[4]) ==2):
@@ -635,9 +637,9 @@ while ser.is_open:
                             print "EDIT MODE: ",str(edit_mode_char_len)
                         else:
                             print "@@@ Play end of word sound @@@"
-                            sound('end')
+                            sound('blocked')
                     else:
-                        music.load("blocked.mp3") ;music.play()
+                        sound('blocked')
                         print "use up and down arrow keys to move cursor"
 
             if( ord(button_value[3]) ==64 and ord(button_value[4]) ==2):
@@ -656,10 +658,10 @@ while ser.is_open:
                             edit_mode_char_len -=1
                         else:
                             print "@@@ Play end of word sound @@@"
-                            sound('end')
+                            sound('blocked')
 
                     else:
-                        music.load("blocked.mp3") ;music.play()
+                        sound('blocked')
                         print "use right left key to move cursor"
 
 
@@ -675,9 +677,9 @@ while ser.is_open:
                             edit_mode_char_len +=1
                         else:
                             print "@@@ Play end of word sound @@@"
-                            sound('end')
+                            sound('blocked')
                     else:
-                        music.load("blocked.mp3") ;music.play()
+                        sound('blocked')
                         print "use right left key to move cursor"
 
 
