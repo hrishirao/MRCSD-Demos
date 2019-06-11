@@ -465,6 +465,10 @@ def sound(argument):
     elif(argument=='cursor'):
         music.load('tick.mp3')
         music.play()
+    elif(argument=='next'):
+        music.load('tick.mp3')
+        music.play()
+    
 
     return
 
