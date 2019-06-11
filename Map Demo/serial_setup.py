@@ -47,7 +47,7 @@ threshold = (distance((top,left),(bottom,right)).kilometers-1.05 )/10
 
 print threshold
 
-ser = serial.Serial("/dev/tty.usbmodem143101", baudrate="115200",timeout=0.001)
+ser = serial.Serial("/dev/tty.usbmodem146101", baudrate="115200",timeout=0.001)
 ## Data frames for API commands
 all_up_frame = bytearray([0x1B,0x16,0x02])
 success_frame = bytearray([0x1B,0x51])
